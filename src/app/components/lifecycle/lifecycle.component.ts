@@ -18,6 +18,8 @@ export class LifecycleComponent implements OnInit {
    * good enough.
    */
   ngOnInit(): void {
+   this.time = Date.now();
+   console.log("Initialization time: " + this.time);
   }
 
   /**
@@ -25,7 +27,8 @@ export class LifecycleComponent implements OnInit {
    * unmounted
    * Here's a hint. You can cause an alert using the method alert("component destroyed!");
    */
-  ngOnDestroy() {
+  ngOnDestroy(): void{
+      alert("Component destroyed");
   }
 
 }
